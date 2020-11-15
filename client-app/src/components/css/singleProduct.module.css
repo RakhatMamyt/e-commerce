@@ -1,0 +1,14 @@
+.componentWrapper {
+  display: inline-block;
+  float: left;
+  width: 150px;
+}
+
+.imgWrapper img {
+  width: 100%;
+}
+
+.description {
+  color: blue;
+  text-align: center;
+}
