@@ -3,7 +3,7 @@ const routerCustomers = express.Router();
 const Customers = require('../models/Customers');
 
 // GET ALL
-routerCustomers.get('/customers', async (req, res) => {
+routerCustomers.get('/allCustomers', async (req, res) => {
   let customers;
   try {
     customers = await Customers.find({});

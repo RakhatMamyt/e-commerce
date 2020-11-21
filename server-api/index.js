@@ -6,7 +6,7 @@ const routerCustomers = require('./api/routeCustomers');
 
 const app = express();
 
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT || 3000;
 
 // db
 initAndConnectDBCustomers();

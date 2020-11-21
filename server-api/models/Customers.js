@@ -10,31 +10,47 @@ const customerSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  avatar: {
-    type: String,
-    // required: true,
-  },
   email: {
     type: String,
-    // required: true,
+    required: true,
+    unique: true,
+  },
+  phone: {
+    type: String,
+    required: true,
   },
   phone: {
     type: Number,
     // required: true,
   },
-  state: {
+  billingAddress: {
     type: String,
-    // required: true,
+    required: true,
   },
-  watched: {
+  shippingAddress: {
     type: String,
+    required: true,
   },
-  purchases: {
-    type: String,
+  watchList: [
+    {
+      type: String,
+    },
+  ],
+  cartList: {
+    productId: { type: String },
+    quantity: { type: Number },
   },
-  spent: {
-    type: Number,
-  },
+  purchaseHistory: [
+    {
+      date: { type: String },
+      items: [
+        {
+          productId: { type: String },
+          quantity: { type: Number },
+        },
+      ],
+    },
+  ],
 });
 // model
 const Customers = mongoose.model('Customers', customerSchema);
