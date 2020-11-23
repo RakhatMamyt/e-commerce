@@ -16,3 +16,15 @@
 .navLinks a:hover {
   color: gold;
 }
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+}
+
+.avatar img {
+  width: 20px;
+  border-radius: 5px;
+}
