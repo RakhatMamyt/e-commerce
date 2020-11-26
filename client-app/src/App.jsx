@@ -8,6 +8,7 @@ import Specials from './components/specials';
 import Philosophy from './components/philosophy';
 import Profile from './components/profile/profile';
 import Login from './components/login';
+import getData from './components/data';
 
 import s from './App.module.css';
 
@@ -16,9 +17,13 @@ import s from './App.module.css';
 let specials = 'Christmas';
 
 const App = () => {
+  const [products, setProducts] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
 
+  console.log(products);
+
   useEffect(() => {
+    if (products === null) setProducts(getData());
     const loginStatus = localStorage.getItem('loggedIn');
     loginStatus === 'true' ? setLoggedIn(true) : undefined;
   });
